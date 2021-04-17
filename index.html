@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense-app</title>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id = "appContainer">
+    <div id = "overskrift"> 
+        <span>Expense tracker</span>
+    </div>
+
+    <div id="nameDiv">
+        <form id = "nameForm">
+            <label for="nameForm">Name:</label><br>
+            <input type="text" id="nameInput"><br>
+        </form>
+    </div>
+
+    <div id="dateAndAmounDiv">
+        <form id="dateForm">
+            <label for="dateForm">Date: </label><br>
+            <input type="date" id="dateInput"><br>
+        </form>
+ 
+        <form id="amountForm">
+            <label for="amountForm">Amount:</label><br>
+            <input type="number" id="amountInput"><br>
+        </form>
+    </div>
+
+    <div id = "addExpenseDiv" >
+        <button  id = "addExpenseButton" type="button">Add Expense</button>
+        <button  id = "clearAllButton" type="button">Clear All</button>
+    </div>
+
+    <table id = "expenseTable">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th id = "totalAmountCounter">Total Amount: 0</th>
+        </tr>
+        </thead>
+        <tbody id = "tBody">
+        <tr>
+          <td id = "noExpenses" colspan="4" >No expenses added yet!</td>
+        </tr>
+       
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>

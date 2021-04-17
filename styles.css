@@ -1,0 +1,111 @@
+*{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#appContainer{
+    width: 80%;
+    margin: auto;
+}
+
+#overskrift{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+#nameDiv
+{
+width: 100%;
+padding: 1%;
+}
+
+#dateAndAmounDiv{
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+}
+
+#nameInput
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+#dateForm
+{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    width: 100%;
+}
+
+#dateInput{
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 15px;
+
+}
+
+#amountForm
+{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    width: 100%;
+}
+
+#amountInput{
+    width: 100%;
+    margin-left: 5px;
+}
+
+
+
+
+#addExpenseDiv{
+width: 100%;
+margin-top: 2%;
+margin-bottom: 2%;
+display: flex;
+justify-content: center;
+flex-direction: row;
+}
+
+#addExpenseButton{
+   
+    font-size: 20px;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+#clearAllButton{
+
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+#expenseTable {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#expenseTable th {
+    padding:0.7%;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid black;
+  }
+
+  #expenseTable td, #cexpenseTable th {
+    border: 1px solid black;
+    padding: 8px;
+  }
+
+  #expenseTable tr:hover {background-color: #ddd;}
