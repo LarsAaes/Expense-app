@@ -29,11 +29,7 @@ while(tBody.firstChild)
     tBody.removeChild(tBody.firstChild);
 }
 //sætter en No expenses added yet!-besked ind øverst i expensetable
-const noExpensesMessage = document.createElement("td")
-const noExpensesMessageText = document.createTextNode("No expenses added yet!")
-noExpensesMessage.colSpan = "4";
-noExpensesMessage.appendChild(noExpensesMessageText);
-tBody.appendChild(noExpensesMessage);
+addExpenseMessage()
 
 // sætter amountCounter til 0
 totalAmountCounter.innerHTML = "Total Amount: 0";
@@ -61,8 +57,11 @@ function addExpense()
 
 function addElement ()
 {
-
-noExpensesMessageDef.remove();
+const noExpensesMessageDef = document.getElementById("noExpenses");
+if(noExpensesMessageDef)
+{
+    noExpensesMessageDef.remove();
+};
 
 const listElementTR = document.createElement("tr")
 const nameListElementTD = document.createElement("td")
@@ -85,6 +84,8 @@ deleteButtonListElementTD.onclick = function ()
 
     listElementTR.remove();
     updateTotalAmount();
+    addExpenseMessage();
+
 }
 tBody.appendChild(listElementTR);
 
@@ -106,4 +107,19 @@ function updateTotalAmount()
 
     totalAmountCounter.innerHTML = "Total value: " + totalvalue;
     console.log(expenseArray);
+}
+
+function addExpenseMessage()
+{
+    if(expenseArray.length === 0)
+    {
+        const noExpensesMessage = document.createElement("td")
+        const noExpensesMessageText = document.createTextNode("No expenses added yet!")
+        noExpensesMessage.colSpan = "4";
+        noExpensesMessage.appendChild(noExpensesMessageText);
+        tBody.appendChild(noExpensesMessage);
+    }
+    else{
+        console.log("YY");
+    }
 }
